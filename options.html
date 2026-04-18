@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Настройки подписи</title>
+		<title>Settings - Telegram Auto Signature</title>
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 			* {
@@ -77,16 +77,16 @@
 		</style>
 	</head>
 	<body>
-		<h2>Настройка подписи</h2>
+		<h2>Signature Settings</h2>
 		<div class="content">
-			<label for="signature">Введите подпись:</label>
-			<input type="text" id="signature" placeholder="Ваша подпись" />
-			<button id="save">Сохранить</button>
+			<label for="signature">Enter your signature:</label>
+			<input type="text" id="signature" placeholder="e.g., -- Valery" />
+			<button id="save">Save Settings</button>
 			<hr />
 			<!-- Отображение сохраненной подписи -->
 			<p id="saved-signature">
-				Сохраненная подпись: <br />
-				<span id="current-signature">Загрузка...</span>
+				Saved signature: <br />
+				<span id="current-signature">Loading...</span>
 			</p>
 		</div>
 		<div class="git">
