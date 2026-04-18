@@ -1,47 +1,53 @@
 # Telegram Auto Signature
 
-## Описание
+A browser extension that automatically appends a custom signature to every message in Telegram Web (Version A). 
 
-Telegram Auto Signature — это браузерное расширение, которое автоматически добавляет подпись к каждому сообщению в веб-версии Telegram. Оно полезно для командных аккаунтов, где несколько сотрудников используют один и тот же Telegram-аккаунт, но хотят подписывать свои сообщения, чтобы было понятно, кто именно пишет.
+This tool is designed for shared team accounts where multiple members operate under a single profile (e.g., support teams, DevOps groups) and need to identify who is sending each message.
 
-## Возможные сценарии использования
+## 🚀 Key Features
 
-- **Командные аккаунты**: Если несколько человек работают с одного Telegram-аккаунта (например, служба поддержки, DevOps-команда), подпись поможет определить автора сообщения.
-- **Личные подписи**: Можно настроить автоматическое добавление вашей персональной подписи, например, в корпоративных чатах.
-- **Структурирование переписки**: Подписи помогают избежать путаницы в обсуждениях.
+- **Automated Workflow**: Adds your signature instantly as you type.
+- **Smart Insertion**: Uses `MutationObserver` to detect the input field without interfering with the message content.
+- **Cursor Stability**: Automatically restores cursor position after adding the signature to ensure a seamless typing experience.
+- **Customizable**: Change your signature on the fly via the extension popup.
 
-## Установка
+## 🛠 Use Cases
 
-1. **Скачайте код расширения** или создайте папку с нужными файлами.
-2. Откройте браузер **Google Chrome** или **Microsoft Edge**.
-3. Перейдите в **Меню → Расширения → Управление расширениями** (или откройте `chrome://extensions/`).
-4. Включите **Режим разработчика** (Developer Mode).
-5. Нажмите **"Загрузить распакованное расширение" (Load unpacked)** и выберите папку с кодом расширения.
-6. Расширение установлено! Оно автоматически запустится при открытии Telegram Web.
+* **Team Collaboration**: Essential for shared accounts (Support, Sales, DevOps) to track message authorship.
+* **Personal Branding**: Automatically add your name or title in corporate environments.
+* **Contextual Clarity**: Helps avoid confusion in fast-paced group discussions.
 
-## Как использовать
+## 📦 Installation
 
-> Расширение работает только в А версии Telegram Web
+Since this is a developer version, follow these steps to install:
 
-1. Перейдите в **https://web.telegram.org/a**.
-2. Начните печатать сообщение — расширение автоматически добавит вашу подпись.
-3. Если вам нужно изменить подпись:
-   - Нажмите на иконку расширения в браузере.
-   - В появившемся окне (popup) введите новую подпись.
-   - Сохраните изменения.
-4. Отправляйте сообщения — подпись будет добавляться автоматически перед отправкой.
+1.  **Download** the repository as a ZIP or clone it to your local machine.
+2.  Open **Google Chrome** or **Microsoft Edge**.
+3.  Go to `Settings` → `Extensions` → `Manage Extensions` (or enter `chrome://extensions/` in the address bar).
+4.  Enable **Developer Mode** (toggle in the top-right corner).
+5.  Click **"Load unpacked"** and select the folder containing the extension files.
+6.  The extension is now active and will run automatically on Telegram Web.
 
-## Технические детали
+## 📖 How to Use
 
-- Используется **MutationObserver**, который отслеживает изменения в поле ввода сообщений.
-- Подпись добавляется без перезаписи текста, что предотвращает потерю первых букв при вводе.
-- Код автоматически сохраняет и восстанавливает позицию курсора после добавления подписи.
+> **Note**: This extension currently supports **Telegram Web Version A** only.
 
-## Известные проблемы
+1.  Navigate to **[https://web.telegram.org/a](https://web.telegram.org/a)**.
+2.  **Set your signature**: Click the extension icon in your browser toolbar, type your desired signature in the popup, and hit "Save".
+3.  **Start typing**: As you interact with the message input field, your signature will be appended automatically.
+4.  Send your message!
 
-- Работает только в **А версии Telegram Web**.
-- Если Telegram обновит разметку страницы, может потребоваться обновление расширения.
+## ⚙️ Technical Details
 
-## Лицензия
+- **Engine**: JavaScript (Vanilla).
+- **DOM Monitoring**: Utilizes `MutationObserver` for high performance and low resource consumption.
+- **State Management**: Uses `chrome.storage` to persist your signature across sessions.
 
-MIT License. Свободно используйте и модифицируйте под свои нужды!
+## ⚠️ Known Limitations
+
+- Compatible only with **Version A** of Telegram Web.
+- Changes in Telegram's internal DOM structure may require extension updates.
+
+## 📄 License
+
+This project is licensed under the **MIT License**. Feel free to use, modify, and distribute!
